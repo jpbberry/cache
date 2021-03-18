@@ -1,8 +1,8 @@
 {
   "name": "@jpbberry/cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A caching structure with aquittable TTD",
-  "main": "index.js",
+  "main": "dist/Cache.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
