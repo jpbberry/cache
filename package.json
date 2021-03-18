@@ -1,6 +1,6 @@
 {
   "name": "@jpbberry/cache",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A caching structure with aquittable TTD",
   "main": "dist/Cache.js",
   "scripts": {
@@ -22,5 +22,6 @@
   "homepage": "https://github.com/jpbberry/cache#readme",
   "dependencies": {
     "@discordjs/collection": "^0.1.6"
-  }
+  },
+  "types": "./dist/Cache.d.ts"
 }
