@@ -53,5 +53,3 @@ export class Cache<K, V> extends Collection<K, V> {
     return true
   }
 }
-
-module.exports = Cache

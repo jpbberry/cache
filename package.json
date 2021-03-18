@@ -1,6 +1,6 @@
 {
   "name": "@jpbberry/cache",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A caching structure with aquittable TTD",
   "main": "dist/Cache.js",
   "scripts": {

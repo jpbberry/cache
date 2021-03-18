@@ -15,7 +15,7 @@ You pass a `time` paramater to the constructor, which will wait that amount of t
 ## Usage
 
 ```js
-const Cache = require('@jpbberry/cache')
+const { Cache } = require('@jpbberry/cache')
 
 const cache = new Cache(1000) // time in milliseconds
 
