@@ -17,15 +17,15 @@ export class Cache<K, V> extends Collection<K, V> {
    * const cache = new Cache()
    * 
    * // Set
-   * cache.set('million', 'smelly') // true
+   * cache.set('foo', 'bar') // true
    * 
    * // Get
-   * cache.get('million') // 'smelly'
-   * cache.get('JPBBerry') // undefined
+   * cache.get('foo') // 'bar'
+   * cache.get('foo2') // undefined
    * 
    * // Delete
-   * cache.delete('million') // true
-   * cache.delete('JPBBerry') // false
+   * cache.delete('foo') // true
+   * cache.delete('foo2') // false
    */
   constructor(public readonly time: number) {
     super()
@@ -41,10 +41,10 @@ export class Cache<K, V> extends Collection<K, V> {
    * // Create the cache
    * const cache = new Cache(15e3)
    * 
-   * cache.get('million') // undefined
+   * cache.get('foo') // undefined
    * 
-   * cache.set('million', 'smelly') // true
-   * cache.get('million') // 'smelly'
+   * cache.set('foo', 'bar') // true
+   * cache.get('foo') // 'smelly'
    */
   public get (key: K): V | undefined {
     if (!super.has(key)) return undefined
@@ -63,8 +63,8 @@ export class Cache<K, V> extends Collection<K, V> {
    * // Create the cache
    * const cache = new Cache(15e3)
    * 
-   * // MILLION smells
-   * cache.set('million', 'smelly')
+   * // Set foo to bar
+   * cache.set('foo', 'bar')
    */
   public set (key: K, val: V, cb?: () => void): any {
     super.set(key, val)
@@ -80,11 +80,11 @@ export class Cache<K, V> extends Collection<K, V> {
    * // Create the cache
    * const cache = new Cache(15e3)
    * 
-   * // Berry smells
-   * cache.set('JPBBerry', 'smelly')
+   * // Set foo to bar
+   * cache.set('foo', 'bar')
    * 
-   * // No he doesn't
-   * cache.delete('JPBBerry')
+   * // Delete foo
+   * cache.delete('foo')
    */
   public delete(key: K): boolean {
     if (!super.has(key)) return false
@@ -106,11 +106,11 @@ export class Cache<K, V> extends Collection<K, V> {
    * // Create the cache
    * const cache = new Cache(69420)
    * 
-   * // MILLION smells
-   * cache.set('million', 'smelly')
+   * // Set foo to bar
+   * cache.set('foo', 'bar')
    * 
    * // Reset the timer
-   * cache._resetTimer('million')
+   * cache._resetTimer('foo')
    */
   public _resetTimer (key: K, cb?: () => void): NodeJS.Timeout | void {
     if (this.timeouts.has(key)) return this.timeouts.get(key)?.refresh()
