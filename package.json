@@ -23,5 +23,8 @@
   "dependencies": {
     "@discordjs/collection": "^0.1.6"
   },
-  "types": "./dist/Cache.d.ts"
+  "types": "./dist/Cache.d.ts",
+  "devDependencies": {
+    "@types/node": "^14.14.37"
+  }
 }
