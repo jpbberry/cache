@@ -44,7 +44,7 @@ export class Cache<K, V> extends Collection<K, V> {
    * cache.get('foo') // undefined
    * 
    * cache.set('foo', 'bar') // true
-   * cache.get('foo') // 'smelly'
+   * cache.get('foo') // 'bar'
    */
   public get (key: K): V | undefined {
     if (!super.has(key)) return undefined
